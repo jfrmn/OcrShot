@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/OcrShot/">
+    <Project Path="OcrShot/OcrShot.csproj" />
+  </Folder>
+  <Folder Name="/OcrShot.Tests/">
+    <Project Path="OcrShot.Tests/OcrShot.Tests.csproj" />
+  </Folder>
+</Solution>
