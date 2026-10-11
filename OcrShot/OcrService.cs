@@ -1,11 +1,10 @@
-using System.Drawing;
 using Tesseract;
 
 namespace OcrShot;
 
 public sealed class OcrService : IDisposable
 {
-    private readonly object _sync = new();
+    private readonly Lock _sync = new();
     private TesseractEngine? _engine;
     private string? _language;
     private bool _disposed;
@@ -32,7 +31,7 @@ public sealed class OcrService : IDisposable
 
             using var pix = PixConverter.ToPix(image);
             using var page = _engine.Process(pix, PageSegMode.Auto);
-            return OcrText.WithoutTrailingTerminators(page.GetText());
+            return page.GetText();
         }
     }
 

@@ -5,6 +5,9 @@
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MainFormOld.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SelectionOverlay.cs">
       <SubType>Form</SubType>
     </Compile>
